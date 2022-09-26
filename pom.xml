@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.simpleframework</groupId>
   <artifactId>simple-projects-pom</artifactId>
@@ -110,23 +108,20 @@
     </developer>
   </developers>
 
-  <!--仓库配置 -->
-  <repositories>
+  <!--仓库配置 旧仓库已过期 -->
+  <!-- <repositories>
     <repository>
       <id>public</id>
       <url>http://maven.simpleframework.net/content/groups/public</url>
       <snapshots>
-        <!-- 资源库加载快照版本 -->
         <enabled>true</enabled>
-        <!-- 允许更新同步快照 -->
         <updatePolicy>always</updatePolicy>
       </snapshots>
       <releases>
-        <!-- 资源库加载稳定版本 -->
         <enabled>true</enabled>
       </releases>
     </repository>
-  </repositories>
+  </repositories> -->
 
   <dependencies>
     <dependency>
@@ -453,7 +448,7 @@
         <artifactId>hessian</artifactId>
         <version>4.0.65</version>
       </dependency>
-      			
+
       <!-- 二维码库 -->
       <dependency>
         <groupId>com.google.zxing</groupId>
@@ -486,24 +481,24 @@
         <version>5.5.5</version>
       </dependency>
 
-	  	<dependency>
-    		<groupId>org.cometd.java</groupId>
-    		<artifactId>cometd-java-server-common</artifactId>
-    		<version>5.0.4</version>
-			</dependency>
-			<dependency>
-				<groupId>org.cometd.java</groupId>
-				<artifactId>cometd-java-server-websocket-javax</artifactId>
-				<version>5.0.4</version>
-			</dependency>  
-			
-			<!-- Hutool工具包 -->
+      <dependency>
+        <groupId>org.cometd.java</groupId>
+        <artifactId>cometd-java-server-common</artifactId>
+        <version>5.0.4</version>
+      </dependency>
+      <dependency>
+        <groupId>org.cometd.java</groupId>
+        <artifactId>cometd-java-server-websocket-javax</artifactId>
+        <version>5.0.4</version>
+      </dependency>
+
+      <!-- Hutool工具包 -->
       <dependency>
         <groupId>cn.hutool</groupId>
         <artifactId>hutool-all</artifactId>
         <version>5.6.5</version>
       </dependency>
-			
+
       <!-- jdbc驱动 -->
       <dependency>
         <groupId>mysql</groupId>
@@ -529,11 +524,11 @@
         <artifactId>jave-nativebin-win64</artifactId>
         <version>3.1.1</version>
       </dependency>
-			<dependency>
-				<groupId>ws.schild</groupId>
-				<artifactId>jave-nativebin-linux64</artifactId>
-				<version>3.1.1</version>
-			</dependency>
+      <dependency>
+        <groupId>ws.schild</groupId>
+        <artifactId>jave-nativebin-linux64</artifactId>
+        <version>3.1.1</version>
+      </dependency>
 
       <!-- html解析 -->
       <dependency>
@@ -580,7 +575,7 @@
         <excludes>
           <exclude>**/*.java</exclude>
         </excludes>
-      </resource> 
+      </resource>
     </resources>
 
     <plugins>
@@ -606,21 +601,21 @@
       </plugin>
     </plugins>
   </build>
-  
+
   <!-- 发布稳定版本到nexus服务 指令mvn clean deploy -DskipTests -->
-	<!-- clean source:jar deploy -DskipTests -->
-	<distributionManagement>	
-		<repository>
-			<id>crdt-releases</id>
-			<url>https://packages.aliyun.com/maven/repository/2085194-release-FOD4x0</url>
-		</repository>
-		<snapshotRepository>
-			<id>crdt-snapshots</id>
-			<url>https://packages.aliyun.com/maven/repository/2085194-snapshot-P80h2E</url>
-		</snapshotRepository>
-	</distributionManagement>
-  
-	<!--
+  <!-- clean source:jar deploy -DskipTests -->
+  <distributionManagement>
+    <repository>
+      <id>crdt-releases</id>
+      <url>https://packages.aliyun.com/maven/repository/2085194-release-FOD4x0</url>
+    </repository>
+    <snapshotRepository>
+      <id>crdt-snapshots</id>
+      <url>https://packages.aliyun.com/maven/repository/2085194-snapshot-P80h2E</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <!--
   <distributionManagement>
     <repository>
       <id>releases</id>
